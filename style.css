@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-base: #000000;
+    --color-primary: #fff;
+    --color-primary-trans: rgba(255, 255, 255, 0.61);
+    --color-secondary: rgba(255, 255, 255, 0.53);
+    --color-cta: rgb(255, 255, 255);
+    --color-cta-trans: rgba(135, 133, 135, 0.66);
+}
+
+
+::selection {
+    color: var(--color-base);
+    background: var(--color-cta);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Urbanist', sans-serif;
+    background: var(--color-base);
+    color: var(--color-primary);
+    transition: all 400ms ease;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.container img {
+    size: .5rem;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}
+
+a {
+    padding: .7rem;
+    font-size: 2em;
+}
+
+a:link {
+    color: var(--color-primary);
+}
+
+/* visited link */
+a:visited {
+    color: var(--color-primary-trans);
+}
+
+/* mouse over link */
+a:hover {
+    color: var(--color-cta-trans);
+}
+
+/* selected link */
+a:active {
+    color: var(--color-cta);
+}
+
+h1, h2, h3, h4, h5 {
+    transition: all 400ms ease;
+}
+
+p, small {
+    transition: all 400ms ease;
+    color: var(--color-secondary);
+}
+
+h1 {
+    font-size: 7.8rem;
+    line-height: 1.1;
+    white-space: nowrap;
+    transition: all 400ms ease;
+    color: var(--color-cta);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+    color: var(--color-primary);
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    padding-top: .5rem;
+    font-size: .8rem;
+}
+
+/* ----- BUTTONS ----- */
+
+.btn {
+    background: var(--color-button-base);
+    color: var(--color-white);
+    display: inline-block;
+    width: fit-content;
+    padding: 0.8rem 1.6rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 400ms ease;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: var(--color-button-base);
+    color: var(--transparent-primary);
+}
+
+.btn-primary {
+    background: var(--color-cta);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    border-color: var(--color-cta);
+    background: var(--color-primary);
+    color: var(--color-cta);
+}
+
+.btn-switch {
+    color: var(--color-black);
+}
+
+.btn-switch:hover {
+    color: var(--color-cta);
+    cursor: pointer;
+}
+
+.btn-lg {
+    padding: 1.1rem 2rem;
+    font-size: 1.2rem;
+}
+
+/* ----- NAV ----- */
+
+nav {
+    width: 100vw;
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    z-index: 2;
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: all 500ms ease;
+}
+
+.window-scroll {
+    background: var(--color-primary-trans);
+    color: var(--color-base);
+}
+
+.window-scroll a {
+    color: var(--color-base);
+}
+
+.window-scroll a:hover {
+    color: var(--color-primary-trans);
+    cursor: pointer;
+}
+
+.window-scroll .nav_logo h3 {
+    color: var(--color-base);
+}
+
+nav h3 {
+    color: var(--color-primary);
+}
+
+nav a {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    transition: all 400ms ease;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: var(--color-cta);
+    transition: all 400ms ease;
+}
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav button {
+    display: none;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
